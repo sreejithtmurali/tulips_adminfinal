@@ -31,6 +31,8 @@ class AddCatScreenViewModel extends BaseViewModel{
 
     setBusy(_isBusy); // Set the ViewModel as not busy
   }
+
+
   File? _file;
   File? get file => _file;
 
@@ -58,7 +60,9 @@ class AddCatScreenViewModel extends BaseViewModel{
     _file=u;
     notifyListeners();
   }
-  UpdateFie(var u)
+
+
+  Updateurl(var u)
   {print("updating url");
 
   url=u;

@@ -298,42 +298,22 @@ Widget _buildSixty(
   return Row(
     children: [
       Container(
-        height: 18.v,
-        width: 47.h,
+        height: 20.v,
         margin: EdgeInsets.only(bottom: 2.v),
-        child: Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                price,
-                style: theme.textTheme.labelLarge!.copyWith(
-                  color: appTheme.gray70001,
-                ),
-              ),
-            ),
-            CustomImageView(
-              imagePath: ImageConstant.imgVector1,
-              height: 1.v,
-              width: 47.h,
-              alignment: Alignment.bottomCenter,
-              margin: EdgeInsets.only(bottom: 7.v),
-            ),
-          ],
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.only(left: 6.h),
         child: RichText(
           text: TextSpan(
             children: [
               TextSpan(
-                text: "₹",
-                style: CustomTextStyles.titleMediumff444444,
+                text: "${price}",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    decoration: TextDecoration.lineThrough,
+                    color: Colors.black
+                ),
               ),
               TextSpan(
-                text: "4200",
+                text: "  ${price1}",
                 style: CustomTextStyles.titleMediumff444444,
               ),
             ],
@@ -341,8 +321,7 @@ Widget _buildSixty(
           textAlign: TextAlign.left,
         ),
       ),
+
     ],
   );
 }
-
-

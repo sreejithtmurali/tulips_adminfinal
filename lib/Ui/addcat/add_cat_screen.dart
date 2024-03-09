@@ -172,10 +172,13 @@ class TakePic extends ViewModelWidget<AddCatScreenViewModel> {
        .child("category_thumbnail")
        .child("/catimage${_image}.jpg");
    UploadTask task = imagefile.putFile(_image!);
+
    TaskSnapshot snapshot = await task;
+
    url = await snapshot.ref.getDownloadURL();
+
    print("url::::${url.toString()}");
-   viewModel.UpdateFie(url);
+   viewModel.Updateurl(url);
 
    // print(file);
   }
